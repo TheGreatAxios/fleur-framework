@@ -1,0 +1,45 @@
+@import 'globalHelpers';
+@import 'clientNav';
+@import 'clientFooter';
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.dropdown-menu {
+	overflow: inherit;
+}
+h1 {
+	@include headerfont;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 1.5% auto;
+}
+
+h2 {
+	@include smaller-head-font;
+}
+h3, h4 {
+	@include header-three-four;
+}
+h5, h6 {
+	@include header-five-six;
+}
+p, input, button, a, li, button, input {
+	@include normalfont;
+}
+
+/* SiteWide */
+html, body {
+	width: 100vw;
+	max-width: 100vw;
+	height: auto;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	@include flexbox;
+	@include flexcol(nowrap);
+	overflow-x: hidden;
+	position: absolute;
+	background-color: $white;
+	scroll-behavior: smooth;
+}

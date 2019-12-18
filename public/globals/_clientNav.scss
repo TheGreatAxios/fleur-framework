@@ -1,0 +1,79 @@
+.topBar {
+	position: relative;
+	height: 70px;
+	@include flexbox;
+	@include flexrow(wrap);
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+	@include respond(mobile) {
+		height: 150px;
+	}
+	a {
+		color: white;
+		margin: 0 10px 0 10px;
+		@include respond(mobile) {
+			margin: 0 15px 0 15px;
+		}
+	}
+	.button {
+		@include respond(mobile) {
+			padding: 25px;
+			font-size: 2rem;
+		}
+		padding: 15px;
+		margin: 0 35px 0 15px;
+		background-color: $primary;
+		border-radius: 15px;
+	}
+	.normal {
+		@include respond(mobile) {
+			font-size: 1.8rem;
+		}
+		color: $black;
+	}
+}
+
+.navWrap {
+	width: 100%;
+	min-height: 50px;
+	max-height: 200px;
+	height: auto;
+	@include flexbox;
+	@include flexrow(wrap);
+	@include respond(mobile) {
+		min-height: 150px;
+	}
+	.navEl {
+		width: 20%;
+		height: auto;
+		@include flexbox;
+		@include flexcol(nowrap);
+		align-items: center;
+		justify-content: center;
+		.navLink {
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			text-align: center;
+			padding: 0;
+			color: $black;
+			text-decoration: none;
+			@include respond(mobile) {
+				font-size: 32.5px;
+
+			}
+			img {
+				@include respond(mobile) {
+					width: auto;
+					padding: 0;
+					margin: 0 auto;
+				}
+				height: 250px;
+				width: auto;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@import '../globals/sitewide';
+
+.navBackground {
+	background: url('/images/qbkls.png');
+	min-height: 50vh;
+	@include respond(mobile) {
+		width: 100%;
+		min-height: 35vh;
+	}
+	height: auto;
+	.headerSection {
+		height: 100%;
+		@include flexbox;
+		@include flexcol(nowrap);
+		align-items: center;
+		justify-content: center;
+		.header {
+			height: 100%;
+			h2 {
+				@include respond(mobile) {
+					font-size: 3.75rem;
+				}
+				padding: 75px 0 50px 0;
+				margin: 0;
+			}
+		}
+	}
+}
